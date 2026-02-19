@@ -21,6 +21,7 @@ employees_df = spark.read.csv("employees.csv", header=True, schema=schema)
 employees_df.show(5)
 
 Task 3: Display schema of DataFrame
+
 employees_df.printSchema()
 
 Task 4: Create a temporary view
@@ -91,3 +92,4 @@ Task 15: Filter Employees with the letter 'o' in the Name
 
 employees_with_o = employees_df.filter(col("Name").contains("o"))
 employees_with_o.show()
+
